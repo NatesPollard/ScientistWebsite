@@ -1,0 +1,96 @@
+
+
+#Neil {
+   /* align the image to the left of the screen */
+    size: cover;
+    border: 3px solid black;
+    margin-left: 7vw;
+    margin-top: 2vw;
+    margin-bottom: 80px;
+    width: 36vw;
+}
+
+#Personal {
+    /* align the image to the right of the screen */
+    float: right;
+    border: 3px solid blue;
+    border-radius: 15px;
+    padding: 10px;
+    width: 38vw;
+    margin-right: 7vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+#Head {
+    color: blue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5vw;
+}
+
+.container {
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: lightgreen;
+    overflow: auto;
+    display: grid; /* Enable Grid */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Add space between the events */
+}
+
+button {
+    border: 3px solid black;
+    background-color: lightblue;
+    color: red;
+    
+}
+
+.center {
+    text-align: center;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#article {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lightcoral;
+    margin: 40px;
+    padding: 10px;
+    ;
+    
+}
+
+#article2 {
+margin-bottom: 20px;
+padding: 10px;
+background-color: lightsalmon;
+font-family: 'Courier New', Courier, monospace;
+font-size: large;
+border: 3px solid red;
+text-align: center;
+display: grid; /* Enable Grid */
+    grid-template-columns: repeat(1, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Add space between the events */
+}
+
+.upcoming-events {
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#form {
+    margin: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#output {
+    margin: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}

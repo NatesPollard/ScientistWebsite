@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientist Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="Head">
+     Neil deGrasse Tyson
+    </header>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <img id="Neil" src="Neil deGrasse Tyson.webp" alt="Neil deGrasse Tyson" class="img-fluid">
+
+    <p id="Personal">
+        Neil deGrasse Tyson is a world-renowned astrophysicist and science 
+         communicator who brings the wonders of the universe to life. As 
+          director of the Hayden Planetarium, he inspires curiosity about 
+           the cosmos through his engaging storytelling and charismatic 
+            presence. Known for Cosmos and StarTalk, he makes complex  
+            science accessible and exciting for everyone. A passionate 
+             advocate for education and critical thinking, Tyson sparks 
+              a love for discovery in audiences worldwide. His work reminds 
+               us to look up and marvel at the universe.
+    </p>
+<br><br><br><br>
+
+<h1>Upcoming Events:</h1>
+    <div class="container">
+        
+        <!-- event 1 -->
+        <div class="upcoming-events">
+            <h2 id="event-name-1"></h2>
+            <p id="location-1"></p>
+            <p id="date-1"></p>
+        </div>
+        
+        <div class="upcoming-events">
+            <h2 id="event-name-2"></h2>
+            <p id="location-2"></p>
+            <p id="date-2"></p>
+        </div>
+        
+        <div class="upcoming-events">
+            <h2 id="event-name-3"></h2>
+            <p id="location-3"></p>
+            <p id="date-3"></p>
+        </div>
+        
+    </div>
+
+    <div class="center">
+ <button onclick="style_me()">Style Me</button>
+</div>
+
+<h1 id="article">Articles</h1>
+
+<div id= "article2" class= "container">
+    
+
+</div>
+
+<div id="form">
+    <label for="scientist-input">Favorite Scientist:</label>
+    <input type="text" id="scientist-input" placeholder="scientist's name">
+    <button onclick="addScientist()">+</button>
+</div>
+<div id="output">
+    <div class="output-box" id="output-box"></div>
+</div>
+
+    <script>
+        // Step 6: Fill in the event details using DOM
+        document.getElementById('event-name-1').textContent = 'Tech Conference 2023';
+        document.getElementById('location-1').textContent = 'San Francisco, CA';
+        document.getElementById('date-1').textContent = 'November 15, 2023';
+
+        document.getElementById('event-name-2').textContent = 'Music Festival';
+        document.getElementById('location-2').textContent = 'Austin, TX';
+        document.getElementById('date-2').textContent = 'December 1, 2023';
+
+        document.getElementById('event-name-3').textContent = 'Art Exhibition';
+        document.getElementById('location-3').textContent = 'New York, NY';
+        document.getElementById('date-3').textContent = 'January 10, 2024';
+
+        // Step 7: Style Me function
+        function style_me() {
+            const events = document.querySelectorAll('.upcoming-events');
+            events.forEach(event => {
+                event.style.backgroundColor = 'lightblue';
+                event.style.borderRadius = '5px';
+                event.style.border = `3px solid black`;
+                event.style.color = 'red';
+                event.style.fontsize = 'large';
+                event.style.fontfamily = 'Arial';
+            });
+        }
+          // Step 8: Create the container and header
+          const container = document.querySelector('#article2');
+
+          // Step 8-3: Create three vertical divs with the same class
+        for (let i = 1; i <= 3; i++) {
+            const articleDiv = document.createElement('div');
+            articleDiv.classList.add('article');
+            
+            // Add article name
+            const articleName = document.createElement('h2');
+            articleName.textContent = `Article ${i}`;
+
+            // Add article description
+            const articleDescription = document.createElement('p');
+            articleDescription.textContent = `This is the description for Article ${i}. It provides a brief overview of the topic.`;
+
+            // Append elements to the article div
+            articleDiv.appendChild(articleName);
+            articleDiv.appendChild(articleDescription);
+
+            // Append the article div to the container
+            container.appendChild(articleDiv);
+        }
+
+         // Function to add the scientist's name to the output box
+         function addScientist() {
+            const input = document.getElementById('scientist-input');
+            const outputBox = document.getElementById('output-box');
+
+            if (input.value.trim() !== "") {
+                // Create a new paragraph element for the scientist's name
+                const scientistName = document.createElement('p');
+                scientistName.textContent = input.value;
+
+                // Append the new paragraph to the output box
+                outputBox.appendChild(scientistName);
+
+                // Clear the input field
+                input.value = "";
+            } else {
+                alert("Please enter a scientist's name!");
+            }
+         }
+    </script>
+
+</body>
+</html>
